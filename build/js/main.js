@@ -15862,7 +15862,7 @@ validator_app.filter('card', function () {
                 break;
 
             default:
-                num1 = value.slice(0, 4);
+                num1 = value.slice(0,4);
                 num2 = value.slice(4,8);
                 num3 = value.slice(8,12);
                 num4 = value.slice(12,16);
@@ -15933,6 +15933,12 @@ validator_app.directive('cardValidation', function($filter, $browser) {
 $(document).ready(function () {
     //function for clean button. If a user input some text to form, the clean button wil be visible
     $('#clean').addClass('unavalible');
+    //fix issues with click on clean button
+    $('#clean').click(function () {
+        $(this).addClass('unavalible').removeClass('avalible');
+        $('input').removeClass('green-outline red-outline');
+        $('#validator').addClass('unavalible').removeClass('avalible').html('');
+    });
     $('input').keyup(function(){
         var val = $('input').val();
         if(val.length > 0){

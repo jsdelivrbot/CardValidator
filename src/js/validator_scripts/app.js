@@ -68,7 +68,7 @@ validator_app.filter('card', function () {
                 break;
 
             default:
-                num1 = value.slice(0, 4);
+                num1 = value.slice(0,4);
                 num2 = value.slice(4,8);
                 num3 = value.slice(8,12);
                 num4 = value.slice(12,16);
