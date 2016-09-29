@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //function for clean button. If a user input some text to form, the clean button wil be visible
     $('#clean').addClass('unavalible');
     $('input').keyup(function(){
         var val = $('input').val();

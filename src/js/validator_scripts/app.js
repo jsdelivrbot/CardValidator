@@ -1,5 +1,7 @@
 var validator_app = angular.module('ValidatorApp', []);
-
+/*recursive sum of two-digit number
+Example: rec_sum(22) = 2 + 2 = 4
+ */
 function rec_sum(val) {
     if(val > 9){
         return (val % 10) + Math.floor(val / 10);
@@ -8,7 +10,7 @@ function rec_sum(val) {
         return val;
     }
 }
-
+//Luhn algoritmh for card number validation
 function validation(card) {
     var arr = [];
     var res = 0;
@@ -36,7 +38,7 @@ validator_app.filter('card', function () {
         var cardNum;
         var num1, num2, num3, num4;
         if (value.length === 16) {
-            // stylesheet for cardnumber
+            // stylesheet for card number
             $(document).ready(function () {
                 if(validation(value)){
                     $('input').addClass('green-outline');

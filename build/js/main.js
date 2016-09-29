@@ -15793,7 +15793,9 @@ PATTERNS:[{gSize:3,lgSize:3,maxFrac:3,minFrac:0,minInt:1,negPre:"-",negSuf:"",po
 
 /* Scripts for Lyrics page */
 var validator_app = angular.module('ValidatorApp', []);
-
+/*recursive sum of two-digit number
+Example: rec_sum(22) = 2 + 2 = 4
+ */
 function rec_sum(val) {
     if(val > 9){
         return (val % 10) + Math.floor(val / 10);
@@ -15802,7 +15804,7 @@ function rec_sum(val) {
         return val;
     }
 }
-
+//Luhn algoritmh for card number validation
 function validation(card) {
     var arr = [];
     var res = 0;
@@ -15830,7 +15832,7 @@ validator_app.filter('card', function () {
         var cardNum;
         var num1, num2, num3, num4;
         if (value.length === 16) {
-            // stylesheet for cardnumber
+            // stylesheet for card number
             $(document).ready(function () {
                 if(validation(value)){
                     $('input').addClass('green-outline');
@@ -15929,6 +15931,7 @@ validator_app.directive('cardValidation', function($filter, $browser) {
     };
 });
 $(document).ready(function () {
+    //function for clean button. If a user input some text to form, the clean button wil be visible
     $('#clean').addClass('unavalible');
     $('input').keyup(function(){
         var val = $('input').val();
