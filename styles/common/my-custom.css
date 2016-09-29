@@ -1,0 +1,29 @@
+.c-a {
+  text-align: center;
+  font-weight: bold;
+  width: 24px;
+}
+.brand-text {
+  font-weight: bold;
+  font-size: 36px;
+  padding: 15px;
+  color: #fff;
+}
+.brand-text:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.brand-text:active {
+  text-decoration: none;
+  color: #fff;
+}
+.gg {
+  background-color: #000000;
+}
+.lsv-social > a:hover {
+  text-decoration: none;
+}
+.navbar-default {
+  background-color: #fff;
+  border: none;
+}

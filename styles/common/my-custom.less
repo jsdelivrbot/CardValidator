@@ -1,0 +1,56 @@
+body{
+  background-color: #7bd9ff;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: @mb-wrapper-width_big;
+  margin: 100px auto;
+  text-align: center;
+  form {
+    position: relative;
+    input {
+      width: 75%;
+      margin: 1em auto;
+      padding: 0.5em 0.25em;
+      border: none;
+      border-radius: 0.2em;
+      font-size: 1.5em;
+      text-align: center;
+      outline: none;
+    }
+    button {
+      right: 16%;
+      position: absolute;
+      border: none;
+      background-color: transparent;
+      padding: 0.5em 0.25em;
+      margin: 1em auto;
+      font-size: 1.5em;
+      outline: none;
+    }
+    .btn-container {
+      display: inline-block;
+      padding: 5px;
+      font-size: 1.5em;
+      .valid {
+        color: @mb-valid_color;
+      }
+      .unvalid{
+        color: @mb-unvalid_color;
+      }
+    }
+    .green-outline{
+      outline: 3px solid @mb-valid_color;
+    }
+    .red-outline{
+      outline: 3px solid @mb-unvalid_color;
+    }
+    .avalible{
+      visibility: visible;
+    }
+    .unavalible{
+      visibility: hidden;
+    }
+  }
+}
